@@ -62,5 +62,5 @@ while True:
     prompt = input("You: ")
     history.append(HumanMessage(content=prompt))  #HumanMessage It is an object 
     response = model.invoke(history)
-    history.append(AIMessage(response.content))
+    history.append(AIMessage(content=response.content))
     print("AI:", response.content)
