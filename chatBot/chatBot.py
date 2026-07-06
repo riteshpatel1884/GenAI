@@ -45,25 +45,25 @@
 #Langchain provideed a messages feature to store the history
 
 
-# from dotenv import load_dotenv
-# from langchain.chat_models import init_chat_model
-# from langchain_core.messages import AIMessage, SystemMessage, HumanMessage
+from dotenv import load_dotenv
+from langchain.chat_models import init_chat_model
+from langchain_core.messages import AIMessage, SystemMessage, HumanMessage
 
-# load_dotenv() 
+load_dotenv() 
 
-# model = init_chat_model("groq:meta-llama/llama-4-scout-17b-16e-instruct")
+model = init_chat_model("groq:meta-llama/llama-4-scout-17b-16e-instruct")
 
 
-# history = [
-#     SystemMessage("You are a funny AI")
+history = [
+    SystemMessage("You are a funny AI")
 
-# ]
-# while True:
-#     prompt = input("You: ")
-#     history.append(HumanMessage(content=prompt))  #HumanMessage It is an object 
-#     response = model.invoke(history)
-#     history.append(AIMessage(content=response.content))
-#     print("AI:", response.content)
+]
+while True:
+    prompt = input("You: ")
+    history.append(HumanMessage(content=prompt))  #HumanMessage It is an object 
+    response = model.invoke(history)
+    history.append(AIMessage(content=response.content))
+    print("AI:", response.content)
 
 
 
