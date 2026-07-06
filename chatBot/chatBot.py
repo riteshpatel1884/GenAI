@@ -13,20 +13,20 @@
 # The above code will work fine but AI will not remember ur previous asked question or resposne. So we need to save the history in a list
 
 
-# from dotenv import load_dotenv
-# from langchain.chat_models import init_chat_model
-# load_dotenv() 
+from dotenv import load_dotenv
+from langchain.chat_models import init_chat_model
+load_dotenv() 
 
-# model = init_chat_model("groq:meta-llama/llama-4-scout-17b-16e-instruct")
+model = init_chat_model("groq:meta-llama/llama-4-scout-17b-16e-instruct")
 
 
-# history = []
-# while True:
-#     prompt = input("You: ")
-#     history.append(prompt)
-#     response = model.invoke(history)
-#     history.append(response.content)
-#     print("AI:", response.content)
+history = []
+while True:
+    prompt = input("You: ")
+    history.append(prompt)
+    response = model.invoke(history)
+    history.append(response.content)
+    print("AI:", response.content)
 
 
 #The above code is good but only for testing and its a short time memory.
