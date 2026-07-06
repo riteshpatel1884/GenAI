@@ -43,3 +43,19 @@
 # Not production scalable
 
 #Langchain provideed a messages feature to store the history
+
+
+from dotenv import load_dotenv
+from langchain.chat_models import init_chat_model
+load_dotenv() 
+
+model = init_chat_model("groq:meta-llama/llama-4-scout-17b-16e-instruct")
+
+
+history = []
+while True:
+    prompt = input("You: ")
+    history.append(prompt)
+    response = model.invoke(history)
+    history.append(response.content)
+    print("AI:", response.content)
