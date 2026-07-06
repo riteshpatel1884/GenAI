@@ -30,7 +30,7 @@
 
 
 #The above code is good but only for testing and its a short time memory.
-# Problems With Your Current Short-Term Memory**
+# Problems With Your Current Short-Term Memory
 
 # No role separation (no system / user / assistant distinction)
 # Just raw strings → weak conversation structure
