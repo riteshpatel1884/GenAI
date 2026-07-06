@@ -90,7 +90,7 @@ if choice == 2:
 if choice == 13:
     mode = "You are a sad AI agent. You respond sadly"
 history = [
-    SystemMessage("You are a funny AI")
+    SystemMessage(content=mode)
 
 ]
 while True:
