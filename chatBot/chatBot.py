@@ -47,15 +47,20 @@
 
 from dotenv import load_dotenv
 from langchain.chat_models import init_chat_model
+from langchain_core.messages import AIMessage, SystemMessage, HumanMessage
+
 load_dotenv() 
 
 model = init_chat_model("groq:meta-llama/llama-4-scout-17b-16e-instruct")
 
 
-history = []
+history = [
+    SystemMessage("You are a funny AI")
+
+]
 while True:
     prompt = input("You: ")
-    history.append(prompt)
+    history.append(HumanMessage(content=prompt))  #HumanMessage It is an object 
     response = model.invoke(history)
-    history.append(response.content)
+    history.append(AIMessage(response.content))
     print("AI:", response.content)
