@@ -1,0 +1,39 @@
+Structured outputs in Generative AI mean forcing the LLM to return information in a predefined format instead of free-form natural language. This makes the output predictable, machine-readable, and easy for applications to process.
+
+
+Structured Output
+{
+  "title": "Interstellar",
+  "genre": "Science Fiction",
+  "director": "Christopher Nolan",
+  "cast": [
+    "Matthew McConaughey",
+    "Anne Hathaway"
+  ],
+  "release_year": 2014
+}
+
+
+Now your application can directly access:
+
+movie["director"]
+movie["cast"]
+movie["release_year"]
+
+without writing custom parsing logic.
+
+We use Pydantic Models for creating this.
+
+
+
+
+
+Pydantic parsers are a way to make an LLM return data that matches a predefined Python class (schema). Instead of getting plain text, you get a validated Python object.
+
+Think of it like this:
+
+Without Pydantic Parser: The LLM writes whatever it wants.
+With Pydantic Parser: The LLM must fill in the fields you defined.
+
+
+
