@@ -1,0 +1,116 @@
+Development Plan
+
+ Step 1 – User Uploads Study Material
+
+**User Uploads Study Material**
+
+Students upload learning resources such as:
+
+* PDFs
+* Lecture notes
+* Textbooks
+* Research papers
+
+
+
+
+ Step 2 – Document Loading
+
+The system loads documents using document loaders.
+
+**Goal:**
+
+Convert raw files into document objects that can be processed.
+
+You may clean the document as well.
+
+
+
+
+
+ Step 3 – Text Splitting (Chunking)
+
+Documents are usually too large for LLM context windows.
+
+So we split them into smaller chunks.
+
+Chunking improves retrieval accuracy.
+
+
+
+
+
+
+ Step 4 – Embedding Generation
+
+Each chunk is converted into a vector embedding.
+
+Embedding models transform text into numerical vectors.
+
+Example:
+
+```
+"Gradient Descent Optimization"
+        ↓
+[0.23, -0.81, 0.44, ...]
+```
+
+These vectors represent semantic meaning.
+
+
+
+
+ Step 5 – Vector Database Storage
+
+All embeddings are stored inside a vector database.
+
+The vector database stores:
+
+* Embeddings
+* Original text chunks
+* Metadata
+
+
+
+
+ Step 6 – User Asks a Question
+
+Now the student interacts with the system.
+
+
+
+
+
+ Step 7 – Query Embedding
+
+The question is also converted into an embedding.
+
+
+
+
+
+ Step 8 – Similarity Search
+
+The vector database performs semantic similarity search.
+
+**Goal:**
+
+Find chunks that are most relevant to the question.
+
+
+
+
+
+ Step 9 – Retriever Component
+
+The retriever selects the top-*k* relevant chunks.
+
+These chunks form the context.
+
+
+
+
+
+ Step 10 – LLM Answers
+
+Based on the retrieved context, the LLM generates the answer.
