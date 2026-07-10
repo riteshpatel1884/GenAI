@@ -24,7 +24,10 @@ print(result.content)
 
 # To store the chunks in vectorDB. First generate embeddin of each chunks then store their embedding in the vector db. Refer 08_vector_DB folder
 
-# jo user
+# jo user query puchega usko me embedd krna hoga an that is called query embeddings
+
+# quert embeedding ko vectorDB me stored embedding se compare karange to get the output. 
+# https://youtu.be/yodh-oEFnb4?si=Z_MBpWAh-kHRLXLm&t=6224
 
 
 from langchain.chat_models import init_chat_model
