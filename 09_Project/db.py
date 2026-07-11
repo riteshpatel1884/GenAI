@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-data = PyPDFLoader("/Deep+Learning+Ian+Goodfellow.pdf")
+data = PyPDFLoader("Deep+Learning+Ian+Goodfellow.pdf")
 docs = data.load()
 
 # creating chunks

@@ -54,3 +54,18 @@ retrieved_docs = retriever.invoke("Explain deep learning")
 
 for doc in retrieved_docs:
     print(doc.page_content)    # Neural networks are used in deep learning.
+
+
+
+
+
+# vector_store ke andar hi similarity_search algorithm hai and ye aur retriever same hi kaam kr rhe hai jo query ko dekh kr documents me se kisi ek similar ko nikal karkre de dega. 
+# So main use of retriever is
+# 1. Vector_store ko ham invoke nhi kar shakte it means ye runnable nhi hai so we cant include it in our chain.  Retrivers ko ham invoke kr shakte hai so there are runnables.
+
+#2. Vector_store me sirf ek hi algo exist krti hai ie similarity search while in retriver they have miltiple techniques(10 almost)
+
+# retriever = vector_store.as_retriever(
+#     search_kwargs={"k": 2}
+# )
+#  Nothing mentioned so by defauly similarity search algo is applied
