@@ -1,6 +1,6 @@
 from langchain_community.vectorstores import Chroma
 from langchain_groq import ChatGroq
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.prompts import ChatPromptTemplate
 from dotenv import load_dotenv
 
@@ -27,11 +27,9 @@ docs = [
 # chromaDB also generates embedding but iske liye isko batana padta hai kiske through generate krna hai. 
 
 #  Initialize your Embedding Model
-embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
-
-
-
-
+embedding_model = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/all-MiniLM-L6-v2"
+)
 
 vector_store = Chroma.from_documents(
     documents=docs,
@@ -43,6 +41,16 @@ result = vector_store.similarity_search("What is used for data analysis", k=2)
 # k menas kitne result chahte ho.
 
 for r in result: 
-    print(r)
+    print(r)   #page_content='Pandas is used for data analysis in Python.' metadata={'source': 'DataScience_book'}
 
-    # uv add sentence-transformers
+
+# When we run this file once then 3 documents ki embeddings create hokar db me store ho jayegi but when we will rerun this file then again 3 documents ki embedding create hokr db me uske niche add ho jayega.
+
+retriever = vector_store.as_retriever(
+    search_kwargs={"k": 2}
+)
+
+retrieved_docs = retriever.invoke("Explain deep learning")
+
+for doc in retrieved_docs:
+    print(doc.page_content)    # Neural networks are used in deep learning.
