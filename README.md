@@ -1,6 +1,6 @@
 # 🤖 GenAI
 
-A hands-on, structured learning repository covering the core building blocks of Generative AI application development — from chat models and embeddings to RAG pipelines and vector databases, primarily built with **LangChain**.
+A hands-on, structured learning repository covering the core building blocks of Generative AI application development - from chat models and embeddings to RAG pipelines and vector databases, primarily built with **LangChain**.
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-🦜🔗-1C3C3C)
@@ -12,7 +12,7 @@ A hands-on, structured learning repository covering the core building blocks of 
 
 ## 📖 Overview
 
-This repository is a personal knowledge base and playground for exploring **Generative AI** concepts step by step — starting from the fundamentals of chat and embedding models, moving through prompt engineering and structured outputs, and culminating in full **Retrieval-Augmented Generation (RAG)** pipelines backed by vector databases.
+This repository is a personal knowledge base and playground for exploring **Generative AI** concepts step by step - starting from the fundamentals of chat and embedding models, moving through prompt engineering and structured outputs, and culminating in full **Retrieval-Augmented Generation (RAG)** pipelines backed by vector databases.
 
 Each folder is self-contained, with working code examples and templates that build on one another.
 
