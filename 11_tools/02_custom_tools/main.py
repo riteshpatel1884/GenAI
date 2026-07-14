@@ -12,3 +12,7 @@ def get_greeting(name: str) -> str:
 result = get_greeting.invoke({"name": "Ritesh"})
 
 print(result )
+print(get_greeting.name )  # name of the tool
+print(get_greeting.description )  # description of the tool
+print(get_greeting.args )  # argumetns of the tool that it needed.
+
