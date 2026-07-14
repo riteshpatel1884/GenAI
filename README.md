@@ -111,7 +111,7 @@ This is primarily a learning repository, but suggestions, issue reports, and pul
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — feel free to use and adapt it for your own learning.
+This project is licensed under the **MIT License** - feel free to use and adapt it for your own learning.
 
 ---
 
