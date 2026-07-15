@@ -65,7 +65,7 @@ print(result2)
 #     response_metadata={
 #         'token_usage': {
 #             'completion_tokens': 23,
-#             'prompt_tokens': 221,
+#             'prompzt_tokens': 221,
 #             'total_tokens': 244,
 #             'completion_time': 0.082569991,
 #             'completion_tokens_details': None,

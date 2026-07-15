@@ -141,3 +141,25 @@ if result.tool_calls:
     final_response = llm.invoke(f"the length of text is {tool_result}")
 
 print(final_response.content)
+print(result.tool_calls[0])
+# {
+#     'name': 'get_text_length',
+#     'args': {'text': 'Hello how are you'},
+#     'id': '5dfd7f44z',
+#     'type': 'tool_call'
+# }
+
+# sending this arguments to our function 
+print(get_text_length.invoke({'text': 'Hello how are you'}))  # 17
+
+# if we send the whole dictionary then 
+print(get_text_length.invoke({
+    'name': 'get_text_length',
+    'args': {'text': 'Hello how are you'},
+    'id': 'dgcstan0z',
+    'type': 'tool_call'
+}))   
+# we got a tool message
+# ToolMessage(content='17', name='get_text_length', tool_call_id='dgcstan0z')
+
+# Now we will maintain a history in 03_main.py
